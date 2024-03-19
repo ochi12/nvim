@@ -8,7 +8,7 @@ return {
 	},
 	config = function()
 		vim.opt.termguicolors = true
-		vim.keymap.set("n", "<C-n>", ":Neotree toggle<CR>")
+		vim.keymap.set("n", "<C-n>", ":Neotree source=filesystem action=focus position=left toggle=true<CR>")
 
 		vim.keymap.set("n", " 1", ":Neotree source=filesystem action=focus position=left toggle=true<CR>")
 		vim.keymap.set("n", " 2", ":Neotree source=buffers action=focus position=left toggle=true<CR>")
