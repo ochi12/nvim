@@ -11,8 +11,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 
 -- vim.cmd(":highlight Normal ctermbg=#123422 guibg=#ff0000")
-
-vim.opt.rtp:prepend(lazypath)
+  vim.opt.rtp:prepend(lazypath)
 
 require("vim-options")
+require("windows")
 require("lazy").setup("plugins")

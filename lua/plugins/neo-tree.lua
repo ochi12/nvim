@@ -7,9 +7,11 @@ return {
     "MunifTanjim/nui.nvim",
   },
   config = function()
-    vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "#202020", ctermbg = "NONE" })
-    vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "#202020", ctermbg = "NONE" })
-    vim.api.nvim_set_hl(0, "NeoTreeEndOfBuffer", { bg = "#202020", ctermbg = "NONE" })
+    vim.cmd(":set rnu")
+
+    local curl = vim.g.terminal_color_8
+    vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "#202021", ctermbg = "NONE"})
+    vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "#202021", ctermbg = "NONE" })
 
     vim.opt.termguicolors = true
     vim.keymap.set("n", "<C-n>", ":Neotree toggle<CR>")

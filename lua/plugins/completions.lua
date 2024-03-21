@@ -17,7 +17,7 @@ return {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require("cmp")
-    
+
       cmp.setup({
         snippet = {
           -- REQUIRED - you must specify a snippet engine
@@ -29,7 +29,7 @@ return {
         window = {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
-  
+
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
