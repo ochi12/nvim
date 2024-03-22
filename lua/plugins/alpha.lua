@@ -6,31 +6,26 @@ return {
     local dashboard = require("alpha.themes.dashboard")
     local theta = require("alpha.fortune")
 
-    local green = vim.g.terminal_color_2
+    local bright_green = vim.g.terminal_color_10
     local orange = vim.g.terminal_color_9
-    vim.api.nvim_set_hl(0, "YonvimDashboardLogo1", { fg = green })
-    vim.api.nvim_set_hl(0, "YonvimDashboardLogo2", { fg = orange })
-
+    local gray = vim.g.terminal_color_0
+    vim.api.nvim_set_hl(0, "header", {fg = bright_green})
+    vim.api.nvim_set_hl(0, "footer", {fg = orange})
     local logo = {
-      [[ ███       ███ ]],
-      [[████      ████]],
-      [[██████     █████]],
-      [[███████    █████]],
-      [[████████   █████]],
-      [[█████████  █████]],
-      [[█████ ████ █████]],
-      [[█████  █████████]],
-      [[█████   ████████]],
-      [[█████    ███████]],
-      [[█████     ██████]],
-      [[████      ████]],
-      [[ ███       ███ ]],
-      [[                  ]],
-      [[ N  E  O  V  I  M ]],
+    "                                                       ",
+    "                                                       ",
+    "   ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗  ",
+    "   ████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║  ",
+    "   ██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║  ",
+    "   ██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║  ",
+    "   ██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║  ",
+    "   ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝  ",
+    "                                                       ",
+    "                                                       "
     }
     dashboard.section.header.val = logo
+    dashboard.section.header.opts.hl = "header"
 
-    dashboard.section.header.opts.hl = "YonvimDashboardLogo2"
     dashboard.section.footer.val = theta()
 
     alpha.setup(dashboard.opts)
