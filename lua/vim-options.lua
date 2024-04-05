@@ -1,29 +1,11 @@
 vim.g.mapleader = " "
 
--- default
 vim.cmd(":set tabstop=2")
 vim.cmd(":set shiftwidth=2")
 vim.cmd(":set expandtab")
 vim.cmd(":set smarttab")
 
 -- auto cd
-
-
-
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.s setlocal expandtab shiftwidth=10 tabstop=10
-]])
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.asm setlocal expandtab shiftwidth=10 tabstop=10
-]])
-
--- makefile
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.mk setlocal expandtab shiftwidth=4 tabstop=4
-]])
-vim.cmd([[
-  autocmd BufRead,BufNewFile *.makefile setlocal expandtab shiftwidth=4 tabstop=4]])
---
 
 vim.cmd(":set rnu")
 vim.keymap.set("n", "<leader>rn", ":set nonumber rnu<CR>")
@@ -36,3 +18,13 @@ vim.keymap.set("n", "<leader>nh", ":nohlsearch<CR>")
 vim.cmd("set clipboard=unnamedplus")
 vim.keymap.set("n", "<leader>c", '"+y')
 vim.keymap.set("n", "<leader>cc", '"+yy')
+vim.keymap.set("v", "<leader>c", '"+y')
+
+
+-- fancy title
+vim.opt.title = true
+vim.opt.titlelen = 0
+vim.opt.titlestring = "   e   o   v   i   m"
+
+-- set syntax shorten
+vim.keymap.set("n", "x16", ":set syntax=x16<CR>")
